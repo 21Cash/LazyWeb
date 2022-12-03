@@ -3,8 +3,7 @@
   overflow: hidden;
   background-color: #646669;
   
-  padding: 10px 5px;
-  
+  padding: 10px 15px;
   border-radius: 10px;
   
 }
@@ -19,6 +18,7 @@
   font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
+  background-color: #323437;
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
