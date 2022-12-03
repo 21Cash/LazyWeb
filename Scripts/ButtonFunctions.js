@@ -12,7 +12,7 @@ function OnClick_ShowStats() {
 	
 	var str = "Classes Attended : " + stats.classesAttended + "<br>"
 				+ "Total Classe : " + stats.totalClasses + "<br>"
-				+ "Attendance percentage : " + stats.percentage;
+				+ "Attendance percentage : " + stats.percentage.toFixed(2) + "%";
 	
 	statsElement.innerHTML = str;
 	
