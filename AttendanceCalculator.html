@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<html>
+ 
+
+<head>
+
+    <title>Attendance Calculator</title>
+    
+    <link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/main.css">
+  	<link rel="stylesheet" href="css/HeaderCss/Header.css">
+    
+    
+    <script src="Scripts/ButtonFunctions.js"></script>
+    
+    <style>
+    .button {
+      border: none;
+      color: #E2B714;
+      /*padding: 15px 32px;*/
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 32px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .button1:hover {
+      background-color: #646669;
+      color: white;
+    }
+    
+    #stats {
+      color: #E2B714;
+      
+    }
+  </style>
+
+</head>
+ 
+
+<body>
+   
+   <h1> Attendance Calculator</h1>
+   
+   <form>
+	  <label for="fname" style="color:#E2B714">Classes Attended:</label><br>
+	  <input type="number" id="classesAttended" name="classesAttended"><br>
+	  <label for="lname" style="color:#E2B714">Total Classes Held:</label><br>
+	  <input type="number" id="totalClasses" name="totalClasses">
+   </form>
+   
+   <button onclick = "OnClick_ShowStats()" type="button" class="button btn_showstats">Show Stats</button>
+   
+   <h1> Stats: </h1>
+   
+   <p id = "stats"> Beans </p>
+   
+</body>
+ 
+</html>
