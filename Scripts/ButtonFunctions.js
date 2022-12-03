@@ -78,26 +78,6 @@ function GetContinuousLeaves(_present, _total) {
 	return leaveStats;
 }
 
-
-// pi GetNumberOfClassesToPresent(float _present, float _total) {
-	
-// 	float _percentage = GetPercentage(_present, _total);	
-	
-// 	int classCnt = 0;
-	
-// 	while(_percentage < minAttendance) {
-// 		_present++;
-// 		_total++;
-		
-// 		_percentage = GetPercentage(_present, _total);
-// 		classCnt++;
-// 	}
-	
-// 	int daysCnt = classCnt / classCountPerDay;
-	
-// 	return MP(classCnt, daysCnt);
-// }
-
 function GetClassesToBePresent(_present, _total) {
 	
 	var _t = GetPercentage(_present, _total);
