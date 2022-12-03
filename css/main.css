@@ -27,7 +27,7 @@ html {
 .logo {
   line-height: 0.1;
   display: table;
-  color: #E2B714;
+  /*color: #E2B714;*/
   font-size: 2em;
   background-color: grey;
   

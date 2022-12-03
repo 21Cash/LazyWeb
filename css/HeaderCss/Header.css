@@ -26,7 +26,8 @@
   
   font-size: 40px;
   font-weight: bold;
-  color: #E2B714;
+  /*color: #E2B714;*/
+  color: black;
   background-color: rgb(0,0,0,0);
 }
 
