@@ -15,7 +15,7 @@ function OnClick_ShowStats() {
 	stats = GetStats(f, s);
 	
 	var str = "Classes Attended : " + stats.classesAttended + "<br>"
-				+ "Total Classe : " + stats.totalClasses + "<br>"
+				+ "Total Classes : " + stats.totalClasses + "<br>"
 				+ "Attendance percentage : " + stats.percentage.toFixed(2) + "% <br>"
 				+ "Continuous Leaves : " + stats.continuousClassLeaves + " classes or " + stats.continuousDayLeaves + " days<br>" 
 				+ "To Gain 75% Attendance : " + stats.continuousClassesToPresent + " classes or " + stats.continuousDaysToPresent + " days";
