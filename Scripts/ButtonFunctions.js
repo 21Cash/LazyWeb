@@ -14,6 +14,7 @@ function OnClick_ShowStats() {
 	var f = document.getElementById("classesAttended").value;
 	var s = document.getElementById("totalClasses").value;
 	targetAttendance = document.getElementById("targetAttendance").value;
+
 	stats = GetStats(f, s);
 	
 	var str = "Classes Attended : " + stats.classesAttended + "<br>"
@@ -86,7 +87,7 @@ function GetClassesToBePresent(_present, _total) {
 	
 	var cnt = 0;
 	
-	while(_t < minAttendance) {
+	while(_t < targetAttendance) {
 		_present++;
 		_total++;
 		
