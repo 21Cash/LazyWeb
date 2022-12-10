@@ -81,7 +81,37 @@ function GetContinuousLeaves(_present, _total) {
 	return leaveStats;
 }
 
+
+function GetClassesToBeAbsentForTargetAttendance(_present, _total) {
+	var _p = _present;
+	var _t = _total;
+	
+	var tAttendance  = GetPercentage(_p, _t);
+	
+	var cnt = 0;
+	
+	while(tAttendance > targetAttendance) {
+		_t++;
+		tAttendance = GetPercentage(_p, _t);
+		cnt++;
+	}
+	
+	var leaveDays = cnt / classesPerDay;
+	
+	var leaveStats = {
+		classes : -cnt,
+		days : -leaveDays.toFixed(2)	
+	};
+	
+	return leaveStats;
+}
+
 function GetClassesToBePresent(_present, _total) {
+	
+	if(GetPercentage(_present, _total) > targetAttendance) {
+		return GetClassesToBeAbsentForTargetAttendance(_present, _total);
+	}
+	
 	
 	var _t = GetPercentage(_present, _total);
 	
