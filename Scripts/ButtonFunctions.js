@@ -5,20 +5,22 @@ const minAttendance = 75;
 const classesPerDay = 7;
 
 
+var targetAttendance = 90;
+
 function OnClick_ShowStats() {
 	
 	var statsElement = document.getElementById("stats");
 	
 	var f = document.getElementById("classesAttended").value;
 	var s = document.getElementById("totalClasses").value;
-	
+	targetAttendance = document.getElementById("targetAttendance").value;
 	stats = GetStats(f, s);
 	
 	var str = "Classes Attended : " + stats.classesAttended + "<br>"
 				+ "Total Classes : " + stats.totalClasses + "<br>"
 				+ "Attendance percentage : " + stats.percentage.toFixed(2) + "% <br>"
 				+ "Continuous Leaves : " + stats.continuousClassLeaves + " classes or " + stats.continuousDayLeaves + " days<br>" 
-				+ "To Gain 75% Attendance : " + stats.continuousClassesToPresent + " classes or " + stats.continuousDaysToPresent + " days";
+				+ "To Gain " + targetAttendance + "% Attendance : " + stats.continuousClassesToPresent + " classes or " + stats.continuousDaysToPresent + " days";
 	statsElement.innerHTML = str;
 	
 }
