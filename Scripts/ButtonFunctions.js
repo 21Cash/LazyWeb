@@ -2,7 +2,7 @@
 
 
 const minAttendance = 75;
-const classesPerDay = 7;
+const classesPerDay = 7.8;
 
 
 var targetAttendance = 90;
