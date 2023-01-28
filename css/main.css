@@ -38,6 +38,24 @@ html {
   
 }
 
+.foot {
+
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   background-color:#646669;
+   text-align: center;  
+   padding-left: 10px;
+   padding-top: 6px;
+   padding-bottom: 5px;
+   padding-right: 10px;
+   margin-left : 40px;
+   margin-bottom:  10px;
+   border-radius: 4px;
+   color : black;
+   font-size: 25px;
+   
+}
 
 
 h1 {
