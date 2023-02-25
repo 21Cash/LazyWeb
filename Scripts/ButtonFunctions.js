@@ -2,10 +2,19 @@
 
 
 const minAttendance = 75;
-const classesPerDay = 7.8;
 
 
+var classesPerDay = 7.8;
 var targetAttendance = 90;
+
+
+function Awake() {
+	
+	console.log("Awake Method Called");
+	document.getElementById("targetAttendance").value = 90;
+	document.getElementById("classesPerDay").value = 7.4;
+	
+}
 
 function OnClick_ShowStats() {
 	
@@ -14,7 +23,9 @@ function OnClick_ShowStats() {
 	var f = document.getElementById("classesAttended").value;
 	var s = document.getElementById("totalClasses").value;
 	targetAttendance = document.getElementById("targetAttendance").value;
-
+	
+	classesPerDay = document.getElementById("classesPerDay").value;
+	
 	stats = GetStats(f, s);
 	
 	var str = "Classes Attended : " + stats.classesAttended + "<br>"
