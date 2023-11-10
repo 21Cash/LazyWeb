@@ -4,7 +4,7 @@
 const minAttendance = 75;
 
 
-var classesPerDay = 7.8;
+var classesPerDay = 7;
 var targetAttendance = 90;
 
 
@@ -12,7 +12,7 @@ function Awake() {
 	
 	console.log("Awake Method Called");
 	document.getElementById("targetAttendance").value = 90;
-	document.getElementById("classesPerDay").value = 7.4;
+	document.getElementById("classesPerDay").value = 7;
 	
 }
 
@@ -64,26 +64,17 @@ function GetPercentage(classesAttended, totalClasses) {
 	
 }
 
+const classesToBunk = (present, total, percentage) => {
+	return Math.floor((100 * present - percentage * total) / percentage);
+};
 
 
 // This Function Return the Continous Class Leaves And Day Leaves Which can be taken
 function GetContinuousLeaves(_present, _total) {
-	
-	var _p = _present;
-	var _t = _total;
-	
-	var tAttendance  = GetPercentage(_p, _t);
-	
-	var cnt = 0;
-	
-	while(tAttendance > minAttendance) {
-		_t++;
-		tAttendance = GetPercentage(_p, _t);
-		cnt++;
-	}
-	
+
+	var cnt = classesToBunk(_present, _total, minAttendance);
 	var leaveDays = cnt / classesPerDay;
-	
+
 	var leaveStats = {
 		classes : cnt,
 		days : leaveDays.toFixed(2)	
